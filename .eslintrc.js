@@ -20,6 +20,8 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'import/prefer-default-export': 'off',
     'no-param-reassign': 'off',
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
     'import/extensions': [
       'error',
       'ignorePackages',
