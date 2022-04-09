@@ -83,15 +83,17 @@ export default function Player({ songs, activeSong }) {
   const nextSong = () => {
     setIndex((state) => {
       if (shuffle) {
-        const next = Math.floor(Math.random() * songs - length);
+        const next = Math.floor(Math.random() * songs.length)
+
         if (next === state) {
-          return nextSong();
+          return nextSong()
         }
-        return next;
+        return next
       }
-      return state === songs.length - 1 ? 0 : state + 1;
-    });
-  };
+
+      return state === songs.length - 1 ? 0 : state + 1
+    })
+  }
 
   const onEnd = () => {
     if (repeat) {
